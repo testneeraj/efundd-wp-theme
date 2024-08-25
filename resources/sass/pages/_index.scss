@@ -1,0 +1,127 @@
+.digital-solution {
+  padding: 100px 0;
+
+  p {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+}
+
+.transaction-overview {
+  padding: 100px 0;
+  background-color: $gray;
+
+  p {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  &--grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    > * {
+      flex: 0 0 calc(50% - 10px);
+      max-width: calc(50% - 10px);
+    }
+  }
+
+  &--col {
+    .card-transaction-overview {
+      background-color: $white;
+      border-radius: 12px;
+      text-align: center;
+      padding: 30px;
+
+      .flag {
+        overflow: hidden;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+
+      .amount {
+        margin: 25px 0 15px;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .currency {
+        color: #909090;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.1;
+        text-transform: uppercase;
+      }
+    }
+
+    &:nth-child(2n+2) {
+      .card-transaction-overview {
+        margin-top: 100px;
+      }
+    }
+
+     &:nth-child(2n+3) {
+      .card-transaction-overview {
+        margin-top: -100px;
+      }
+    }
+  }
+}
+
+// < 1200px
+@include media-breakpoint-down(xl) {
+  .transaction-overview {
+    &--grid {
+      margin-top: 80px;
+    }
+  }
+}
+
+// < 768px
+@include media-breakpoint-down(md) {
+  .transaction-overview {
+    padding: 60px 0;
+
+    p {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    &--grid {
+      margin-top: 50px;
+    }
+
+    &--col {
+      .card-transaction-overview .amount {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+// < 576px
+@include media-breakpoint-down(sm) {
+  .transaction-overview {
+    &--grid {
+      flex-direction: column;
+
+      >* {
+        flex: none;
+        max-width: 100%;
+      }
+    }
+
+    &--col {
+      &:nth-child(2n+2),
+      &:nth-child(2n+3) {
+        .card-transaction-overview {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  transition: 500ms $cubic-transition;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.btn-light-green {
+    color: $body-color;
+    background-color: $light-green;
+    border-color: $light-green;
+
+    &:hover {
+      color: $white;
+      background-color: $body-color;
+      border-color: $body-color;
+    }
+  }
+
+  &-grp {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+// < 480px
+@media (max-width: 479px) {
+  .btn {
+    &-grp {
+      gap: 10px;
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
