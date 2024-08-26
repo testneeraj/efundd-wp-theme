@@ -1,23 +1,55 @@
-$(document).ready(function() {
-	//$('#header').load('header.html');
-	//$('#footer').load('footer.html');
+// Hero Card Slider
+var swiper = new Swiper(".hero--swiper", {
+  slidesPerView: 1.01,
+  spaceBetween: 20,
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay: 2000,
+  },
 
-  	// $(window).on('scroll',function(event) {
-    //     var scroll = $(window).scrollTop();
-    //     if (scroll < 245) {
-    //         $(".navbar").removeClass("sticky");
-    //     } else {
-    //         $(".navbar").addClass("sticky");
-    //     }
-    // });
+  breakpoints: {
+    576: {
+      slidesPerView: 1.8,
+    },
+    992: {
+      slidesPerView: 2.5,
+    },
+    1200: {
+      slidesPerView: 2.75,
+    },
+    1400: {
+      slidesPerView: 3.1,
+    },
+  },
+});
 
+// Account Management Card Slider
+var swiper = new Swiper(".account-management--swiper", {
+  slidesPerView: 1.01,
+  spaceBetween: 20,
+  // autoplay: {
+  //   delay: 1500,
+  // },
 
-	$(document).on('mouseover','.child-item-anchor',function (e){
-		console.log('ff');
-		$img = $(this).data('srcimage');
-		$sid = $(this).data('sid');
-		//$(this).closest('.sub-menu-img-block').find('.submenu-image').find('src').attr('src',$img);
-		//$('.child-item-anchor').parent('div').siblings('.sub-menu-img-block .submenu-image src').attr('src',$img);
-		$("#"+$sid).attr('src',$img);
-	});
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    576: {
+      slidesPerView: 1.1,
+    },
+    768: {
+      slidesPerView: 1.5,
+    },
+    992: {
+      slidesPerView: 2,
+    },
+    1400: {
+      slidesPerView: 2.9,
+    },
+  },
 });

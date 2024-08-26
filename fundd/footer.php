@@ -122,7 +122,7 @@ $main_footer_menu = render_menu('footer');
 </footer>
 <!-- End: Footer -->
 </main>
-
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/swiper-bundle.min.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>

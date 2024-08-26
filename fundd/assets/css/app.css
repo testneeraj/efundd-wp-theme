@@ -694,7 +694,7 @@ progress {
   }
 }
 
-.list-unstyled, .footer--nav-col ul {
+.list-unstyled, .mobile-app .app-feature--list, .footer--nav-col ul {
   padding-left: 0;
   list-style: none;
 }
@@ -11951,6 +11951,32 @@ main {
 .section-title--lg {
   font-size: 4.8rem;
 }
+.section-title.has-bg-gradient {
+  background: linear-gradient(90deg, #00423C 0%, #24EC7E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  display: inline-block;
+  padding: 10px 24px;
+  background-color: #AFF8C8;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.title-row {
+  margin-bottom: 50px;
+}
+.title-row p {
+  font-size: 2rem;
+  line-height: 1.4;
+}
 
 @media (max-width: 767.98px) {
   .section-title {
@@ -11959,6 +11985,9 @@ main {
   }
   .section-title--lg {
     font-size: 3.2rem;
+  }
+  .title-row p {
+    font-size: 1.6rem;
   }
 }
 .footer {
@@ -12131,6 +12160,84 @@ main {
     grid-template-columns: repeat(2, max-content);
   }
 }
+.hero {
+  padding: 100px 0;
+  background-color: #00423C;
+  overflow: hidden;
+}
+.hero--content {
+  color: #fff;
+  text-align: center;
+}
+.hero--content h1, .hero--content .h1 {
+  text-transform: uppercase;
+  font-size: 7rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.hero--content p {
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+}
+.hero--swiper {
+  margin-top: 70px;
+  overflow: visible;
+}
+.hero--swiper .swiper-slide {
+  height: initial;
+}
+.hero--swiper .card-hero {
+  background-color: #097152;
+  padding: 30px;
+  border-radius: 10px;
+  color: #fff;
+}
+.hero--swiper .card-hero--title {
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.hero--swiper .card-hero--img {
+  padding: 0 30px;
+  height: 280px;
+}
+.hero--swiper .card-hero--img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 1199.98px) {
+  .hero--swiper .card-hero--img {
+    height: 150px;
+  }
+}
+@media (max-width: 991.98px) {
+  .hero--content h1, .hero--content .h1 {
+    font-size: 5rem;
+  }
+  .hero--content p {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .hero {
+    padding: 60px 0;
+  }
+  .hero--content h1, .hero--content .h1 {
+    font-size: 3.6rem;
+  }
+  .hero--content p {
+    font-size: 1.6rem;
+  }
+  .hero--swiper {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 575.98px) {
+  .hero--content h1, .hero--content .h1 {
+    font-size: 3rem;
+  }
+}
 .cta {
   background-color: #097152;
 }
@@ -12199,6 +12306,26 @@ main {
   background-color: #0C0A09;
   border-color: #0C0A09;
 }
+.btn.btn-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  color: #0C0A09;
+  font-weight: 500;
+}
+.btn.btn-link .icon {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: url(../img/other/angle-right-black.svg);
+  background-repeat: no-repeat;
+  background-size: 8px;
+}
+.btn.btn-link:hover {
+  opacity: 0.7;
+}
 .btn-grp {
   display: flex;
   flex-wrap: wrap;
@@ -12213,12 +12340,445 @@ main {
     width: 100%;
   }
 }
+.worldwide-payments {
+  padding: 100px 0;
+  background-color: #EDEFEC;
+}
+.worldwide-payments p {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.worldwide-payments .currency--list {
+  display: grid;
+  gap: 20px;
+}
+.worldwide-payments .currency--list-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.worldwide-payments .currency--list-item .country {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.worldwide-payments .currency--list-item .flag {
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.worldwide-payments .currency--list-item .currency {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.worldwide-payments .currency--list-item .currency-alias {
+  font-size: 1.6rem;
+  color: #5F6368;
+  text-transform: uppercase;
+}
+.worldwide-payments .currency--list-item .amount {
+  text-align: right;
+}
+.worldwide-payments .currency--list-item .amount .large {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.worldwide-payments .currency--list-item .amount .small {
+  font-size: 1.6rem;
+  color: #5F6368;
+}
+
+.payments {
+  padding-top: 100px;
+}
+.payments--grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 50px;
+}
+.payments--col {
+  background-color: #AFF8C8;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+.payments--col-header h4, .payments--col-header .h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.payments--col-header p {
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+.payments--col-footer {
+  text-align: center;
+}
+.payments--col-footer .image {
+  height: 250px;
+}
+.payments--col-footer .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: none;
+}
+
+.payment-methods {
+  padding: 100px 0 150px;
+}
+.payment-methods--grid {
+  display: grid;
+  gap: 150px;
+}
+.payment-methods--col {
+  display: flex;
+  align-items: center;
+  gap: 150px;
+}
+.payment-methods--col-content .title-row {
+  margin: 0;
+}
+.payment-methods--col-content .title-row .section-title {
+  margin-bottom: 20px;
+}
+.payment-methods--col-content .title-row p {
+  font-size: 1.8rem;
+}
+.payment-methods--col-img .image {
+  background-color: #EDEFEC;
+  height: 560px;
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.payment-methods--col-img .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.payment-methods--col:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.crm-content--wrapper {
+  padding: 100px 135px;
+  background-color: #097152;
+  border-radius: 10px;
+}
+.crm-content--wrapper .title-row {
+  color: #fff;
+  margin-bottom: 0;
+}
+.crm-content--wrapper .title-row .subtitle {
+  color: #0C0A09;
+  background-color: #24EC7E;
+}
+.crm-cta--list {
+  display: grid;
+  gap: 15px;
+}
+.crm-cta--list-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+.crm-cta--list-item .account-creation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.crm-cta--list-item .account-creation--title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.crm-cta--list-item .account-creation--title .icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #097152;
+}
+.crm-cta--list-item .account-creation--title .icon img {
+  max-height: 50px;
+}
+.crm-cta--list-item .account-creation--title .title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.crm-cta--list-item .account-creation--badge .text {
+  padding: 7px 10px;
+  font-weight: 500;
+  background-color: #24EC7E;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.crm-cta--list-item .payment-info--title, .crm-cta--list-item .payment-info--account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.crm-cta--list-item .payment-info--title .flag {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.crm-cta--list-item .payment-info--title .currency {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.crm-cta--list-item .payment-info--account {
+  margin-top: 20px;
+}
+.crm-cta--list-item .payment-info--account .amount {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.crm-cta--list-item .payment-info--account .account-number {
+  color: #CECFD2;
+}
+.crm-cta--list-item .payment-info--account .account-number .icon img {
+  width: 35px;
+}
+
+.security {
+  padding: 120px 0 60px;
+}
+.security-text--grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 50px 30px;
+}
+.security-text--col .security-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: #097152;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.security-text--col .security-icon img {
+  max-height: 19px;
+}
+.security-text--col .security-content h4, .security-text--col .security-content .h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.security-text--col .security-content p {
+  line-height: 1.4;
+}
+
+.mobile-app {
+  padding: 80px 0;
+}
+.mobile-app .app-feature--list {
+  display: grid;
+  gap: 30px;
+  margin-top: 50px;
+}
+.mobile-app .app-feature--list li h5, .mobile-app .app-feature--list li .h5 {
+  color: #097152;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.mobile-app .app-feature--list li p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.payment-automation {
+  padding: 70px 0 150px;
+}
+.payment-automation--grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.payment-automation--col-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EDEFEC;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 0 auto;
+  height: 335px;
+  margin-bottom: 30px;
+}
+.payment-automation--col-image img {
+  max-height: 100%;
+}
+.payment-automation--col-content h4, .payment-automation--col-content .h4 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.fingerpay-solution--img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  background-color: #097152;
+  border-radius: 10px;
+  padding: 80px;
+  text-align: center;
+}
+.fingerpay-solution p {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.account-management {
+  padding: 150px 0 0;
+  overflow: hidden;
+}
+.account-management--swiper {
+  padding-bottom: 100px;
+  overflow: visible;
+}
+.account-management--swiper .swiper-slide {
+  height: initial;
+}
+.account-management--swiper .swiper-nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.account-management--swiper .swiper-nav .swiper-button-next,
+.account-management--swiper .swiper-nav .swiper-button-prev {
+  position: static;
+  width: 40px;
+  height: 40px;
+  background-color: #00423C;
+  border-radius: 50%;
+}
+.account-management--swiper .swiper-nav .swiper-button-next::after,
+.account-management--swiper .swiper-nav .swiper-button-prev::after {
+  color: #fff;
+  font-size: 1.4rem;
+}
+.account-management--swiper .swiper-nav .swiper-button-next:hover:not(.swiper-button-disabled),
+.account-management--swiper .swiper-nav .swiper-button-prev:hover:not(.swiper-button-disabled) {
+  background-color: #0C0A09;
+}
+.account-management .card-account-management {
+  height: 100%;
+  background-color: #AFF8C8;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 60px;
+  border-radius: 10px;
+}
+.account-management .card-account-management--title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.account-management .card-account-management--text {
+  line-height: 1.3;
+}
+.account-management .card-account-management--footer {
+  padding: 0 30px;
+}
+.account-management .analysis-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #fff;
+  padding: 15px;
+  gap: 15px;
+  border-radius: 6px;
+}
+.account-management .analysis-card h5, .account-management .analysis-card .h5 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0;
+}
+.account-management .analysis-card p {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #73808C;
+}
+.account-management .analysis-card--left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.account-management .analysis-card--left .image {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+}
+.account-management .analysis-card--right {
+  text-align: right;
+}
+
 .digital-solution {
   padding: 100px 0;
 }
 .digital-solution p {
   font-size: 2rem;
   margin-bottom: 30px;
+}
+.digital-solution--grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.digital-solution--col {
+  padding: 30px;
+  background-color: #00423C;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+.digital-solution--col-header {
+  color: #fff;
+}
+.digital-solution--col-header h5, .digital-solution--col-header .h5 {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.digital-solution--col-footer .image {
+  width: 90%;
+  aspect-ratio: 1;
+  margin: 0 auto;
+  padding: 20px;
+}
+.digital-solution--col-footer .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .transaction-overview {
@@ -12271,18 +12831,169 @@ main {
   margin-top: -100px;
 }
 
+@media (max-width: 1399.98px) {
+  .payment-methods--grid {
+    display: grid;
+    gap: 80px;
+  }
+  .payment-methods--col {
+    gap: 50px;
+  }
+  .crm-content--wrapper {
+    padding: 70px 50px;
+  }
+  .mobile-app .app-feature--list {
+    margin: 0;
+  }
+  .mobile-app--img {
+    margin-bottom: 30px;
+  }
+  .fingerpay-solution--img {
+    height: 400px;
+  }
+  .digital-solution--grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .digital-solution--col-footer .image {
+    width: 50%;
+  }
+}
 @media (max-width: 1199.98px) {
+  .worldwide-payments .currency--list {
+    margin-top: 50px;
+  }
+  .payments br {
+    display: none;
+  }
+  .payments--col-footer .image {
+    height: 150px;
+  }
+  .payments--col-footer .image img {
+    object-fit: contain;
+  }
+  .payment-methods--col-img .image {
+    height: 460px;
+    width: 400px;
+  }
+  .crm-cta--list {
+    margin-top: 50px;
+  }
+  .security-text--grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .payment-automation--col-image {
+    height: 250px;
+  }
   .transaction-overview--grid {
     margin-top: 80px;
   }
 }
+@media (max-width: 991.98px) {
+  .payment-methods {
+    padding-bottom: 100px;
+  }
+  .payment-methods--col {
+    flex-direction: column-reverse;
+  }
+  .payment-methods--col:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+  .payment-methods--col-img {
+    width: 100%;
+  }
+  .payment-methods--col-img .image {
+    width: 100%;
+  }
+  .mobile-app .app-feature--list {
+    gap: 20px;
+  }
+  .mobile-app--img img {
+    max-height: 400px;
+  }
+  .fingerpay-solution--img {
+    display: inline-flex;
+    height: auto;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+  .fingerpay-solution--img img {
+    max-height: 400px;
+  }
+  .digital-solution--col-footer .image {
+    width: 80%;
+  }
+}
 @media (max-width: 767.98px) {
-  .transaction-overview {
+  .worldwide-payments .currency--list-item .currency,
+  .worldwide-payments .currency--list-item .amount .large {
+    font-size: 1.8rem;
+  }
+  .payments {
+    padding-top: 60px;
+  }
+  .payments--grid {
+    grid-template-columns: auto;
+  }
+  .payments--col-header h4, .payments--col-header .h4 {
+    font-size: 1.8rem;
+  }
+  .payment-methods {
     padding: 60px 0;
   }
-  .transaction-overview p {
+  .payment-methods--grid {
+    gap: 50px;
+  }
+  .payment-methods--col-img .image {
+    height: auto;
+  }
+  .payment-methods--col-content .title-row p {
+    font-size: 1.6rem;
+  }
+  .security {
+    padding: 60px 0 0;
+  }
+  .security-text--grid {
+    grid-template-columns: auto;
+    gap: 30px;
+  }
+  .payment-automation {
+    padding: 0 0 60px;
+  }
+  .payment-automation--grid {
+    grid-template-columns: auto;
+    gap: 40px;
+  }
+  .digital-solution,
+  .transaction-overview,
+  .worldwide-payments {
+    padding: 60px 0;
+  }
+  .digital-solution p,
+  .transaction-overview p,
+  .fingerpay-solution p,
+  .worldwide-payments p {
     font-size: 1.6rem;
     margin-bottom: 20px;
+  }
+  .digital-solution--col {
+    padding: 20px;
+  }
+  .digital-solution--col-footer .image {
+    width: 95%;
+  }
+  .account-management {
+    padding: 60px 0 0;
+  }
+  .account-management br {
+    display: none;
+  }
+  .account-management .card-account-management {
+    gap: 30px;
+  }
+  .account-management--swiper .swiper-nav {
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
   }
   .transaction-overview--grid {
     margin-top: 50px;
@@ -12292,6 +13003,76 @@ main {
   }
 }
 @media (max-width: 575.98px) {
+  .worldwide-payments .currency--list-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .worldwide-payments .currency--list-item .amount {
+    text-align: left;
+  }
+  .crm-content--wrapper {
+    padding: 50px 30px;
+  }
+  .crm-cta--list-item .account-creation--title .title,
+  .crm-cta--list-item .payment-info--title .currency,
+  .crm-cta--list-item .payment-info--account .amount {
+    font-size: 1.6rem;
+  }
+  .crm-cta--list-item .account-creation {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .crm-cta--list-item .account-creation--badge .text {
+    font-size: 1.3rem;
+  }
+  .crm-cta--list-item .payment-info--account {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .digital-solution--grid {
+    grid-template-columns: auto;
+  }
+  .digital-solution--col {
+    flex-direction: column-reverse;
+    gap: 20px;
+    text-align: center;
+  }
+  .digital-solution--col-footer .image {
+    padding: 0;
+    width: 100%;
+    aspect-ratio: initial;
+  }
+  .digital-solution--col-footer .image img {
+    max-width: 100px;
+  }
+  .account-management .card-account-management--title {
+    font-size: 1.8rem;
+  }
+  .account-management .card-account-management--footer {
+    padding: 0;
+  }
+  .account-management .analysis-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .account-management .analysis-card h5, .account-management .analysis-card .h5 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+  }
+  .account-management .analysis-card p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  .account-management .analysis-card--left {
+    align-items: flex-start;
+  }
+  .account-management .analysis-card--left .image {
+    width: 30px;
+    height: 30px;
+  }
+  .account-management .analysis-card--right {
+    text-align: left;
+  }
   .transaction-overview--grid {
     flex-direction: column;
   }

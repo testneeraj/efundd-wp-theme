@@ -1,0 +1,114 @@
+.hero {
+  padding: 100px 0;
+  background-color: $primary;
+  overflow: hidden;
+
+  &--content {
+    color: $white;
+    text-align: center;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 7rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+    }
+  }
+
+  &--swiper {
+    margin-top: 70px;
+    overflow: visible;
+
+    .swiper-slide {
+      height: initial;
+    }
+
+    .card-hero {
+      background-color: $secondary;
+      padding: 30px;
+      border-radius: 10px;
+      color: $white;
+
+      &--title {
+        font-weight: 600;
+        margin-bottom: 30px;
+      }
+
+      &--img {
+        padding: 0 30px;
+        height: 280px;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+// < 1200px
+@include media-breakpoint-down(xl) {
+  .hero {
+    &--swiper {
+      .card-hero {
+        &--img {
+          height: 150px;
+        }
+      }
+    }
+  }
+}
+
+// < 992px
+@include media-breakpoint-down(lg) {
+  .hero {
+    &--content {
+      h1 {
+        font-size: 5rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+// < 768px
+@include media-breakpoint-down(md) {
+  .hero {
+    padding: 60px 0;
+
+    &--content {
+      h1 {
+        font-size: 3.6rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+      }
+    }
+
+    &--swiper {
+      margin-top: 50px;
+    }
+  }
+}
+
+// < 576px
+@include media-breakpoint-down(sm) {
+  .hero {
+    &--content {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+}

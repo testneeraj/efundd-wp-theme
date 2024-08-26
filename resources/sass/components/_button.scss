@@ -25,6 +25,29 @@
     }
   }
 
+  &.btn-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    color: $body-color;
+    font-weight: 500;
+
+    .icon {
+      display: block;
+      width: 12px;
+      height: 12px;
+      background: url(../img/other/angle-right-black.svg);
+      background-repeat: no-repeat;
+      background-size: 8px;
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
   &-grp {
     display: flex;
     flex-wrap: wrap;
