@@ -37,7 +37,7 @@ a,
 a:focus,
 a:active,
 a:visited {
-	color: $body-color;
+	color: inherit;
 	outline: none;
 	text-decoration: none;
 }
@@ -59,5 +59,17 @@ img {
 }
 
 main {
+	margin-top: 130px;
 	transition: 500ms $cubic-transition;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+// < 1200px
+@include media-breakpoint-down(xl) {
+	main {
+		margin-top: 77px;
+	}
 }

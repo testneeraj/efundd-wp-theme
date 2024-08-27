@@ -1,3 +1,26 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const navbarToggler = document.querySelector(".navbar-toggler");
+  const body = document.body;
+
+  navbarToggler.addEventListener("click", function () {
+    const isExpanded = body.classList.contains("no-scroll");
+
+    if (isExpanded) {
+      body.classList.remove("no-scroll");
+    } else {
+      body.classList.add("no-scroll");
+    }
+  });
+
+  document.getElementById("headerNav").addEventListener("hidden.bs.collapse", function () {
+    body.classList.remove("no-scroll");
+  });
+
+  document.getElementById("headerNav").addEventListener("shown.bs.collapse", function () {
+    body.classList.add("no-scroll");
+  });
+});
+
 // Hero Card Slider
 var swiper = new Swiper(".hero--swiper", {
   slidesPerView: 1.01,

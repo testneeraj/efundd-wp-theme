@@ -10,7 +10,7 @@
     h1 {
       text-transform: uppercase;
       font-size: 7rem;
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 15px;
     }
 
@@ -56,6 +56,8 @@
 // < 1200px
 @include media-breakpoint-down(xl) {
   .hero {
+    padding-top: 50px;
+
     &--swiper {
       .card-hero {
         &--img {
