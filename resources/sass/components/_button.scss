@@ -25,6 +25,18 @@
     }
   }
 
+  &.btn-black {
+    color: $white;
+    background-color: $body-color;
+    border-color: $body-color;
+
+    &:hover {
+      color: $body-color;
+      background-color: $light-green;
+      border-color: $light-green;
+    }
+  }
+
   &.btn-link {
     position: relative;
     display: inline-flex;
@@ -52,6 +64,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+  }
+
+  &.btn-block {
+    display: block;
   }
 }
 

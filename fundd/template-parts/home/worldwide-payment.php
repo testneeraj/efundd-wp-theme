@@ -22,7 +22,7 @@ if (isset($worldwide_account_section)):
                                                 <?php endif; ?>
                                                 <div class="name">
                                                     <div class="currency"><?php echo $transaction["currency"] ?></div>
-                                                    <div class="currency-alias"><?php echo $transaction["currency"] ?></div>
+                                                    <div class="currency-alias"><?php echo $transaction["currency_alias"] ?></div>
                                                 </div>
                                             </div>
                                             <div class="amount">
@@ -37,15 +37,15 @@ if (isset($worldwide_account_section)):
                             <h3 class="section-title"><?php echo $worldwide_account_section["title"] ?></h3>
                             <p><?php echo $worldwide_account_section["text"] ?></p>
                             <div class="btn-grp">
-                                <?php if (!empty($hero_section["button_text_1"])): ?>
-                                    <a href="<?php echo @$hero_section["button_link_1"] ?>"
-                                       title="<?php echo $hero_section["button_text_1"] ?>"
-                                       class="btn btn-light-green"><?php echo $hero_section["button_text_1"] ?></a>
+                                <?php if (!empty($worldwide_account_section["button_text_1"])): ?>
+                                    <a href="<?php echo @$worldwide_account_section["button_link_1"] ?>"
+                                       title="<?php echo $worldwide_account_section["button_text_1"] ?>"
+                                       class="btn btn-light-green"><?php echo $worldwide_account_section["button_text_1"] ?></a>
                                 <?php endif; ?>
-                                <?php if (!empty($hero_section["button_text_2"])): ?>
-                                    <a href="<?php echo $hero_section["button_link_2"] ?>"
-                                       title="<?php echo $hero_section["button_text_2"] ?>"
-                                       class="btn btn-light-green"><?php echo $hero_section["button_text_2"] ?></a>
+                                <?php if (!empty($worldwide_account_section["button_text_2"])): ?>
+                                    <a href="<?php echo $worldwide_account_section["button_link_2"] ?>"
+                                       title="<?php echo $worldwide_account_section["button_text_2"] ?>"
+                                       class="btn btn-light-green"><?php echo $worldwide_account_section["button_text_2"] ?></a>
                                 <?php endif; ?>
                             </div>
                         </div>

@@ -37,6 +37,33 @@
   }
 }
 
+.card-pricing,
+.payment-methods {
+  ul {
+    @extend .list-unstyled;
+
+    li {
+      position: relative;
+      padding-left: 20px;
+
+      + li {
+        margin-top: 10px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 15px;
+        height: 15px;
+        background: url(../img/other/check-icon.svg) center left no-repeat;
+        background-size: 12px;
+      }
+    }
+  }
+}
+
 // < 768px
 @include media-breakpoint-down(md) {
   .section-title {

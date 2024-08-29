@@ -51,6 +51,16 @@
       }
     }
   }
+
+  &--personal {
+    padding-top: 50px;
+    
+    .hero {
+      &--content {
+        text-align: left;
+      }
+    }
+  }
 }
 
 // < 1200px
