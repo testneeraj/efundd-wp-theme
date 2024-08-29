@@ -124,5 +124,23 @@ $main_footer_menu = render_menu('footer');
 </main>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/swiper-bundle.min.js"></script>
 <?php wp_footer(); ?>
+<script>
+    jQuery(document).ready(function($) {
+        // Define the URLs for each tab
+        var tabUrls = {
+            'corporate-tab': '<?php echo home_url() ?>',
+            'business-tab': '#',
+            'personal-tab': '<?php echo home_url('personal-landing-page') ?>'
+        };
+
+        // Listen for changes on the radio inputs
+        $('.sliding-tabs input[type="radio"]').change(function() {
+            var selectedTab = $(this).attr('id');
+            if (tabUrls[selectedTab]) {
+                window.location.href = tabUrls[selectedTab];
+            }
+        });
+    });
+</script>
 </body>
 </html>

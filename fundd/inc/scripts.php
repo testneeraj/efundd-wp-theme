@@ -10,7 +10,7 @@ function add_theme_scripts()
 add_action('wp_enqueue_scripts', 'add_theme_scripts');
 
 function footer_js(){
-    wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/jquery-3.6.0.min.js');
+    wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/jquery.min.js');
     wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js');
     wp_enqueue_script( 'app', get_template_directory_uri() . '/assets/js/app.js');
 }
